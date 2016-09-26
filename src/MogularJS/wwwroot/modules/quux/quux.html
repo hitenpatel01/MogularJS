@@ -1,0 +1,43 @@
+﻿<div class="content">
+    <h2>Quux => Module-level Modularity</h2>
+    <p>
+        Every application feature in MogularJS is a individual module, created as a folder and comprising of everything required for the feature like
+        controllers, services, directives, angular components, models, templates, configuration and even unit tests.
+    </p>
+    <p>
+<pre><code>\baz                            \messaging                          \corge
+    \baz.config.json                \messaging.config.json              \corge.config.json
+    \baz.config.ts                  \messaging.config.ts                \corge.config.ts
+    \baz.controller.ts              \messaging.model.ts                 \corge.controller.ts
+    \baz.html                       \messaging.module.ts                \corge.html
+    \baz.module.ts                  \messaging.service.ts               \corge.module.ts
+    \baz.service.ts                                                     \corge.service.ts
+                                                                        \corge-detail.controller.ts
+                                                                        \corge-master.controller.ts</code></pre>
+    </p>
+    <p>
+        Modules contain only the necessary file types required to build the feature and follow naming convention <code>&lt;name&gt;.&lt;type&gt;.&ltextension&gt;</code>
+        instead of sub folders to avoid unnecessary folder traversal, however they could be used if code is better organized for a particular module.
+    </p>
+    <p>
+        Modules can be categorized into following types:
+        <ul>
+            <li class="bullet">
+                <b>Root Modules:</b> entry point of a Single Page Application where service behaviors (ex: routing) are configured.<br />
+                ex: Foo, Bar and User
+            </li>
+            <li class="bullet">
+                <b>Feature Modules:</b> unique application feature that could be dependent on shared modules.<br />
+                ex: Baz, Quux, Corge, Grault, Garply, Waldo and Fred
+            </li>
+            <li class="bullet">
+                <b>Shared Modules:</b> reusable components and services (ex: menu, messaging, notification, etc).<br />
+                ex: Menu, Messaging and Notification
+            </li>
+            <li class="bullet">
+                <b>Core Module:</b> infrastructural components/services, base classes and services implementing cross cutting concerns.<br />
+                ex: Core
+            </li>
+        </ul>
+    </p>
+</div>

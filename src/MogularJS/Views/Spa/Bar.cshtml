@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Bar";
+    ViewData["BaseHref"] = "/bar/";
+}
+
+<div ng-app="bar" class="container body-content">
+    <div class="popover bottom" style="margin-top: 0px; float: right">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <b><a href="/foo/quux">Root module</a></b>
+        </div>
+    </div>
+    <notification-component></notification-component>
+    <h1>Bar</h1>
+    <div class="popover right">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <b><a href="/foo/quux">Root module</a></b>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+        <div class="col-md-2">
+            <menu-component></menu-component>
+        </div>
+        <div class="col-md-10 ">
+            <div class="popover top" style="margin-top: -59px; margin-left: 60px">
+                <div class="arrow"></div>
+                <div class="popover-content">
+                    <b><a href="/foo/quux">Feature module</a></b>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <ng-view></ng-view>
+        </div>
+    </div>
+</div>

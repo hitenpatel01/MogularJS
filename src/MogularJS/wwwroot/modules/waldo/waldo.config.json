@@ -1,0 +1,15 @@
+{
+  "name": "waldo",
+  "dependencies": [ ],
+  "enabled": true,
+  "namespace": "MogularJS.Waldo",
+  "applications": [ "bar" ],
+  "routes": [
+    {
+      "path": "/waldo",
+      "name": "Waldo",
+      "templateUrl": "/modules/waldo/waldo.html",
+      "order": 200
+    }
+  ]
+}

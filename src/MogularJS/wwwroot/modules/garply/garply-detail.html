@@ -1,0 +1,26 @@
+﻿<div class="panel panel-default" ng-controller="garplyDetailController as detailCtrl">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Detail View
+        </h3>
+    </div>
+    <div class="panel-body" style="padding: 10px 10px 10px 10px">
+        <div style="height: 100px">
+            <div ng-if="null == this.$parent.$parent.selectedItem">
+                No radio button is selected in master view
+            </div>
+            <div ng-if="null != this.$parent.$parent.selectedItem">
+                Radio button <b>'{{this.$parent.selectedItem.text}}'</b> is selected in master view
+            </div>
+        </div>
+        <hr style="margin-top: 10px; margin-bottom: 10px" />
+        <div style="min-height: 70px">
+            <div ng-if="null == this.detailCtrl.message">
+                No message received from master view
+            </div>
+            <div ng-if="null != this.detailCtrl.message" style="height: 70px">
+                Message <b>'{{detailCtrl.message}}'</b> received from Master View
+            </div>
+        </div>
+    </div>
+</div>

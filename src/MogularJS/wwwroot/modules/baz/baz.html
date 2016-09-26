@@ -1,0 +1,41 @@
+﻿<div class="content">
+    <h2>Baz => Application Modularity</h2>
+    <p>
+        <span>
+            Create a web application having multiple SPAs in order to manage complexity by having smaller manageable SPAs, allow technology variance
+            based on features in a SPA, enable multiple development teams to build the application, etc.
+        </span>
+        <em>
+            (an ecommerce application can be compose of
+            seperate SPAs for product browsing, account management and checkout, developed by 3 teams, having specialized application architectures 
+            and technology stacks)
+        </em>.
+    </p>
+    <p>
+        MogularJS composes <code>Foo</code> and <code>Bar</code> SPAs which are mutually exclusive (only one of them is accessed at a time) and
+        <code>User</code> SPA which is accessible along with the other SPAs.
+    </p>
+    <p>
+        Angular's <code>ng-app</code> directive allows bootstrapping of only first application found on DOM, however <code>angular.bootstrap()</code>
+        can be used to bootstrap multiple applications. When SPAs work in conjunction, they can communicate with each other thorough shared services
+        by maintaining service instance globally.
+    </p>
+    <p>
+        <code>Foo</code> and <code>User</code> SPAs consume <code>MessagingService</code> to update/display
+        User Name. The service instance in managed by <code>MessagingServiceFactory</code> as a window global variable.
+    </p>
+    <p>
+        <input ng-model="bazCtrl.userName" type="text" class="form-control"
+               placeholder="Enter user name"
+               style="max-width: none; width: 300px; display: inline-block; margin-right: 5px" />
+        <button type="button" class="btn btn-primary" ng-click="bazCtrl.updateUserName()" ng-disabled="bazCtrl.userName.length <= 0">Update</button>
+        <em>
+            (updated user name displays on the right in menu)
+        </em>
+    </p>
+    <p>
+        When creating multiple SPA, set <code>base</code> header tag properly in the template so that links within each SPA resolves correctly.
+        Menu links on the left do not have SPA name in their <code>href</code> but the links resolve to contain SPA name as it is set in the 
+        <code>base</code> header tag.
+    </p>
+</div>

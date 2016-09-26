@@ -1,0 +1,19 @@
+﻿{
+  "name": "core",
+  "dependencies": [],
+  "enabled": true,
+  "conventions": {
+    "component": "Component$",
+    "config": "Config$",
+    "constant": "Constant$",
+    "controller": "Controller$",
+    "directive": "Directive$",
+    "decorator": "Decorator$",
+    "factory":  "Factory$",
+    "filter": "Filter$",
+    "provider": "Provider$",
+    "run":  "Run$",
+    "service": "Service$",
+    "value":  "Value$"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "foo",
+  "dependencies": ["menu", "notification", "messaging", "ngRoute"],
+  "enabled": true,
+  "namespace": "MogularJS.Foo",
+  "defaultPath": "/baz",
+  "html5Mode":  true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "baz",
+  "dependencies": [],
+  "enabled": true,
+  "namespace": "MogularJS.Baz",
+  "applications": [ "foo" ],
+  "routes": [
+    {
+      "path": "/baz",
+      "name": "Baz",
+      "templateUrl": "/modules/baz/baz.html",
+      "controller": "bazController",
+      "controllerAs": "bazCtrl",
+      "order": 100
+    }
+  ]
+}

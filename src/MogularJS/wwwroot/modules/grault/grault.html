@@ -1,0 +1,20 @@
+﻿<div class="content">
+    <h2>Grault => Modular Cohesion</h2>
+    <p>
+        This module features service modularity and cohesion among them through messaging using <a href="http://reactivex.io/rxjs/">RxJS</a> among services.
+    </p>
+    <p>
+        <input ng-model="graultCtrl.message" type="text" class="form-control"
+               placeholder="Enter message to notify other modules"
+               style="max-width: none; width: 300px; display: inline-block; margin-right: 5px" />
+        <button type="button" class="btn btn-primary" ng-click="graultCtrl.notify()" ng-disabled="graultCtrl.message.length <= 0">Notify</button>
+    </p>
+    <p>
+        <ul>
+            <li>Notify button is handled by <code>GraultController</code> and it calls <code>GraultService.processNotify()</code>, representing business activity happening in Grault module.</li>
+            <li><code>GraultService.processNotify()</code> futher calls <code>MessagingService.publish()</code> which acts as broker to dispatch the message to subscribers.</li>
+            <li>Subscribers bring their service in execution context from <code>run block</code> supported by Angular modules and subscribes to <code>MessagingService</code>.</li>
+            <li><code>Baz</code>, <code>Quux</code> and <code>Corge</code> modules subscribe to this message and displays it as notification at top of the page.</li>
+        </ul>
+    </p>
+</div>

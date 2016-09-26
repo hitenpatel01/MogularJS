@@ -1,0 +1,6 @@
+{
+  "name": "notification",
+  "dependencies": [],
+  "enabled": true,
+  "namespace": "MogularJS.Notification"
+}

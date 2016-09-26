@@ -1,0 +1,68 @@
+﻿<div class="content">
+    <h2>Garply => Controller Modularity</h2>
+    <div ng-controller="garplyController as garplyCtrl">
+        <div class="row">
+            <div class="col-md-6">
+                <ng-include src="'/modules/garply/garply-master.html'"></ng-include>
+                    <!--<div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Master View
+                </h3>
+            </div>
+            <div class="panel-body" style="padding: 10px 10px 10px 10px">
+                <p><b>Notify using $scope data</b></p>
+                <div class="radio" ng-repeat="item in masterCtrl.data">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="{{item.id}}" value="{{item.text}}" ng-click="$parent.$parent.selectedItem = item">
+                        {{item.text}}
+                    </label>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px" />
+                <p><b>Notify using $scope events</b></p>
+                <p>
+                    <input ng-model="masterCtrl.message" type="text" class="form-control"
+                           placeholder="Enter message to send to detail view"
+                           style="max-width: none; width: 300px; display: inline-block; margin-right: 5px" />
+                    <button type="button" class="btn btn-primary" ng-click="masterCtrl.sendMessageToChildView()" ng-disabled="masterCtrl.message.length <= 0">Send</button>
+                </p>
+            </div>
+        </div>-->
+            </div>
+            <div class="col-md-6">
+                <ng-include src="'/modules/garply/garply-detail.html'"></ng-include>
+                <!--<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Detail View
+                        </h3>
+                    </div>
+                    <div class="panel-body" style="padding: 10px 10px 10px 10px">
+                        <div style="height: 100px">
+                            <div ng-if="null == this.$parent.selectedItem">
+                                No radio button is selected in master view
+                            </div>
+                            <div ng-if="null != this.$parent.selectedItem">
+                                Radio button <b>'{{this.$parent.selectedItem.text}}'</b> is selected in master view
+                            </div>
+                        </div>
+                        <hr style="margin-top: 10px; margin-bottom: 10px" />
+                        <div style="min-height: 70px">
+                            <div ng-if="null == this.detailCtrl.message">
+                                No message received from master view
+                            </div>
+                            <div ng-if="null != this.detailCtrl.message" style="height: 70px">
+                                Message <b>'{{detailCtrl.message}}'</b> received from Master View
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <p>
+        A view can comprise of multiple controllers exhibiting a particular aspect of the functionality. The controllers could be nested or sibling
+        to other controllers and can inform each other about changes by either sharing <code>$scope</code> of an overarching parent controller or using
+        <code>$emit</code>, <code>$broadcast</code> and <code>$on</code> events provided by <code>$scope</code>. 
+    </p>
+</div>

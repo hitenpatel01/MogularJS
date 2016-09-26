@@ -1,0 +1,8 @@
+{
+  "name": "bar",
+  "dependencies": [ "menu", "notification", "messaging", "ngRoute" ],
+  "enabled": true,
+  "namespace": "MogularJS.Bar",
+  "defaultPath": "/garply",
+  "html5Mode": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "grault",
+  "dependencies": [ ],
+  "enabled": true,
+  "namespace": "MogularJS.Grault",
+  "applications": [ "foo" ],
+  "routes": [
+    {
+      "path": "/grault",
+      "name": "Grault",
+      "templateUrl": "/modules/grault/grault.html",
+      "controller": "graultController",
+      "controllerAs": "graultCtrl",
+      "order": 400
+    }
+  ]
+}

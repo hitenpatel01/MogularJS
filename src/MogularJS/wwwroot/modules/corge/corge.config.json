@@ -1,0 +1,19 @@
+{
+  "name": "corge",
+  "dependencies": [ ],
+  "enabled": true,
+  "namespace": "MogularJS.Corge",
+  "applications": [ "foo" ],
+  "routes": [
+    {
+      "path": "/corge",
+      "name": "Corge",
+      "templateUrl": "/modules/corge/corge.html",
+      "order": 300
+    }
+  ],
+  "messages": {
+    "masterViewMessage": "masterViewMessage",
+    "detailViewMessage": "detailViewMessage"
+  }
+}

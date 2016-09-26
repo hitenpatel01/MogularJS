@@ -1,0 +1,21 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Feature Modules</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-sidebar">
+            <li ng-repeat="menu in menuItems"><a href="{{menu.url}}">{{menu.title}}</a></li>
+        </ul>
+    </div>
+    <div class="popover bottom">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <p><b><a href="/foo/quux">Shared module</a></b> used by both <code>Foo</code> &amp; <code>Bar</code> root modules to display links for features
+            in the SPA by <b><a href="/foo/corge">configuring behavior at runtime</a></b>
+            </p>
+            <p>
+                Click on the links to see each feature within the SPA
+            </p>
+        </div>
+    </div>
+</div>

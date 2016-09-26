@@ -1,0 +1,15 @@
+{
+  "name": "quux",
+  "dependencies": [ ],
+  "enabled": true,
+  "namespace": "MogularJS.Quux",
+  "applications": [ "foo" ],
+  "routes": [
+    {
+      "path": "/quux",
+      "name": "Quux",
+      "templateUrl": "/modules/quux/quux.html",
+      "order": 200
+    }
+  ]
+}

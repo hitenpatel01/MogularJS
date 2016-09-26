@@ -1,0 +1,19 @@
+{
+  "name": "garply",
+  "dependencies": [ ],
+  "enabled": true,
+  "namespace": "MogularJS.Garply",
+  "applications": [ "bar" ],
+  "routes": [
+    {
+      "path": "/garply",
+      "name": "Garply",
+      "templateUrl": "/modules/garply/garply.html",
+      "order": 100
+    }
+  ],
+  "messages": {
+    "masterViewMessage": "masterViewMessage",
+    "detailViewMessage": "detailViewMessage"
+  }
+}

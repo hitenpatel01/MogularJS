@@ -1,7 +1,73 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
-
-<p>Use this area to provide additional information.</p>
+<div class="container body-content">
+    <h1>About</h1>
+    <div class="clear"></div>
+    <div class="row">
+        <div class="col-md-9">
+            <blockquote>
+                <p>
+                    Modular programming is a software design technique that emphasizes separating the functionality of a program into independent,
+                    interchangeable modules, such that each contains everything necessary to execute only one aspect of the desired functionality.
+                </p>
+                <footer>wikipedia.org/wiki/ modular_programming​</footer>
+            </blockquote>
+            <p>
+                <img src="~/images/blocks.jpg" width="400" style="float:left; margin-right: 30px" />
+                AngularJS provides framework-level constructs to develop modular code, however an application architecture is envisioned such that:
+                <ul>
+                    <li>Code modularity is maintained in fast paced agile development.</li>
+                    <li>Enable quick prototyping of business ideas.</li>
+                    <li>Ability to enable or disable features without code changes.</li>
+                    <li>Clean code organization for easier refactoring.</li>
+                    <li>Avoid code branching for features taking multiple sprints.</li>
+                </ul>
+            </p>
+            <p>
+                MogularJS is implementation of the envisioned architecture following principles described below and to act as ready reference of techniques
+                on modularity so that application development is focused on delivering business value rather than exploring ways to achieve them.
+            </p>
+            <h2>Key Principles</h2>
+            <p>
+                <div class="text-center">
+                    <img src="~/images/principles.png" />
+                </div>
+            </p>
+            <h3>Multi-level Modularization</h3>
+            <p>
+                Applications should be built is a hierarchical manner composed of high level modules which further composes of lower level
+                modules, such that every module exhibits Single Responsibility Principle at their level. MogularJS achieves multi-level
+                modularization by composing multiple SPAs and each feature within them as individual angular modules. The modules further
+                decomposes functionality into controllers and services.
+            </p>
+            <h3>Modular Cohesion</h3>
+            <p>
+                Application modules should be independent of other modules but they must be cohesive by notifying data changes and activities to
+                each other so that they can collaborate for the purpose of the application. MogularJS leverages <code>$scope</code> data binding and events for
+                inter-controller communication and <a href="http://reactivex.io/rxjs/">RxJS</a> for services to communicate business activities to other services.
+            </p>
+            <h3>Dynamic Modularization</h3>
+            <p>
+                Applications should be able to consume/replace modules with minimal code changes. MogularJS introduces <code>Json</code> based
+                configurations to control status and other aspects of angular modules, dynamically adds feature modules as dependency of root modules
+                and configures service behaviour at runtime based on configurations.
+            </p>
+            <h2>Further Reading</h2>
+            <p>
+                Please browse through <b>Foo</b> and <b>Bar</b> menu entires at top to learn more about aforementioned principles and techniques or download
+                the source code from <a href="https://github.com/patelhi/mogularjs">GitHub</a>.
+            </p>
+        </div>
+        <div class="col-md-3">
+            <h4>About Me</h4>
+            <img src="~/images/hiten.jpg" width="260" class="text-center" />
+            <p class="text-justify" style="margin-top: 20px">
+                Hello, I'm Hiten Patel, a software developer and architect. I am passionate for .NET &amp; open source
+                technologies and use them to built enterprise web solutions and help teams to understand &amp; follow engineering best practices. I live with my wife and
+                two boys in Bergen Co, NJ.
+            </p>
+            <p class="text-justify">Please visit my blog at <a href="http://www.hitenpatel.net" target="_blank">hitenpatel.net</a> for posts that you may find interesting.</p>
+        </div>
+    </div>
+</div>

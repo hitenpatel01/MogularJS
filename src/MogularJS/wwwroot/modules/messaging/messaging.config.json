@@ -1,0 +1,6 @@
+{
+  "name": "messaging",
+  "dependencies": [],
+  "enabled": true,
+  "namespace": "MogularJS.Messaging"
+}

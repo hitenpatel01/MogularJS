@@ -1,0 +1,6 @@
+{
+  "name": "menu",
+  "dependencies": [],
+  "enabled": true,
+  "namespace": "MogularJS.Menu"
+}
