@@ -108,7 +108,7 @@ gulp.task('src', ['clean:src', 'config', 'tslint'], function () {
         .pipe(ignore.exclude("*.map"))
         .pipe(uglify())
         .pipe(rename(paths.tsOutputMinFile))
-        .pipe(sourcemaps.write(".", { includeContent: false, sourceRoot: '/modules/' }))
+        .pipe(sourcemaps.write(".", { includeContent: false, sourceRoot: '../..' }))
         .pipe(gulp.dest("."));
 });
 gulp.task("test:continuous", ["spec"], function () {

@@ -487,6 +487,7 @@ var MogularJS;
         }
         Messaging.MessagingServiceFactory = MessagingServiceFactory;
         ;
+        MessagingServiceFactory.$inject = ['$window'];
     })(/* istanbul ignore next */Messaging = MogularJS.Messaging || (MogularJS.Messaging = {}));
 })(/* istanbul ignore next */MogularJS || (MogularJS = {}));
 

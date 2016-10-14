@@ -5,15 +5,36 @@
         controllers, services, directives, angular components, models, templates, configuration and even unit tests.
     </p>
     <p>
-<pre><code>\baz                            \messaging                          \corge
-    \baz.config.json                \messaging.config.json              \corge.config.json
-    \baz.config.ts                  \messaging.config.ts                \corge.config.ts
-    \baz.controller.ts              \messaging.model.ts                 \corge.controller.ts
-    \baz.html                       \messaging.module.ts                \corge.html
-    \baz.module.ts                  \messaging.service.ts               \corge.module.ts
-    \baz.service.ts                                                     \corge.service.ts
-                                                                        \corge-detail.controller.ts
-                                                                        \corge-master.controller.ts</code></pre>
+        <div class="row">
+            <div class="col-md-12 col-lg-4">
+<pre><code>\baz
+  \baz.config.json
+  \baz.config.ts
+  \baz.controller.ts
+  \baz.html
+  \baz.module.ts
+  \baz.service.ts</code></pre>
+            </div>
+            <div class="col-md-12 col-lg-4">
+<pre><code>\messaging
+  \messaging.config.json
+  \messaging.config.ts
+  \messaging.model.ts
+  \messaging.module.ts
+  \messaging.service.ts</code></pre>
+            </div>
+            <div class="col-md-12 col-lg-4">
+<pre><code>\corge
+  \corge.config.json
+  \corge.config.ts
+  \corge.controller.ts
+  \corge.html
+  \corge.module.ts
+  \corge.service.ts
+  \corge-detail.controller.ts
+  \corge-master.controller.ts</code></pre>
+            </div>
+        </div>
     </p>
     <p>
         Modules contain only the necessary file types required to build the feature and follow naming convention <code>&lt;name&gt;.&lt;type&gt;.&ltextension&gt;</code>

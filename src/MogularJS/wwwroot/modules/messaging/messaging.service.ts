@@ -31,6 +31,7 @@ namespace MogularJS.Messaging {
         $window[MESSAGING_SERVICE_OBJECT_NAME] = $window[MESSAGING_SERVICE_OBJECT_NAME] || new MessagingService();
         return $window[MESSAGING_SERVICE_OBJECT_NAME];
     };
+    MessagingServiceFactory.$inject = ['$window'];
     export interface IMessagingServiceFactory {
         (): MessagingService;
     }

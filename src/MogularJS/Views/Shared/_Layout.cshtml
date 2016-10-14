@@ -36,7 +36,11 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <p id="user" class="navbar-text spa" ng-cloak ng-controller="userController as userCtrl">Welcome, {{userCtrl.user.name}}!</p>
+                        <p id="user" class="navbar-text" ng-cloak ng-controller="userController as userCtrl">
+                        <span class="spa">
+                            Welcome, {{userCtrl.user.name}}!
+                        </span>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -58,7 +62,7 @@
         <script src="~/dist/config.js"></script>
         <script src="~/dist/app.js"></script>
         <script>
-            angular.bootstrap($("#user"), ['user', 'messaging']);
+            angular.bootstrap($("#user"), ['user'], { strictDi: true });
         </script>
     </environment>
     <environment names="Production">
@@ -82,7 +86,7 @@
         <script src="~/dist/config.min.js" asp-append-version="true"></script>
         <script src="~/dist/app.min.js" asp-append-version="true"></script>
         <script>
-            angular.bootstrap($("#user"), ['user', 'messaging']);
+            angular.bootstrap($("#user"), ['user'], { strictDi: true });
         </script>
     </environment>
     @RenderSection("scripts", required: false)

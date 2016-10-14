@@ -1,9 +1,19 @@
 ﻿<div class="content">
     <h2>Waldo => Template Modularity</h2>
+    <div class="form-group">
+        <label>Scope Id: {{this.$id}}</label>
+        <input ng-model="data" type="text" class="form-control" placeholder="Enter something here" style="width: 100%" />
+    </div>
+    <div class="row">
+        <ng-include src="'/modules/waldo/waldo-templateA.html'"></ng-include>
+        <ng-include src="'/modules/waldo/waldo-templateB.html'"></ng-include>
+        <ng-include src="'/modules/waldo/waldo-templateC.html'"></ng-include>
+        <ng-include src="'/modules/waldo/waldo-templateD.html'"></ng-include>
+        <ng-include src="'/modules/waldo/waldo-templateE.html'"></ng-include>
+    </div>
     <p>
-        Templates can be broken down into several reusable templates and referenced in containing template using <code>ng-include</code> directive.
-        <code>Garply</code> module splits templates into 3 templates. The main template <code>garply.html</code> is the main view of the module
-        while includes <code>garply-master.html</code> and <code>garply-detail.html</code> templates. Also templates can declare controller to be
-        used with it.
+        Templates can be broken down into several reusable templates and referenced using <code>ng-include</code> directive. Templates are associated to 
+        <code>$controller</code> of parent template in which they are referenced or can declare <code>$controller</code> to be used with the template. 
+        <code>ng-include</code> creates isolated child scope of parent <code>$scope</code>.
     </p>
 </div>

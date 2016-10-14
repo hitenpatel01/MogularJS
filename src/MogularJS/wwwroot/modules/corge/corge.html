@@ -22,11 +22,11 @@
         for disabled modules are not displayed to make them inaccessible.
     </p>
     <pre><code>angular.module(rootModule, [])
-    .config(configuration, $routeProvider){
-        for(let moduleName in configuration){
-            if(true === configuration[module].enabled){
-                $routeProvider.when(configuration[module].path, configuration[module].route);
-            }
-        }
-    }</code></pre>
+  .config(configuration, $routeProvider){
+    for(let moduleName in configuration){
+      if(true === configuration[module].enabled){
+        $routeProvider.when(configuration[module].path, configuration[module].route);
+      }
+    }
+  }</code></pre>
 </div>
